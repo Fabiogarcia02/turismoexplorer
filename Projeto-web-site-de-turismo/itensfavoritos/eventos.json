@@ -1,0 +1,67 @@
+{
+  "grupo1": [
+    {
+      "nome": "Ney Matogrosso – Bloco na Rua",
+      "descricao": "Com seu espetáculo 'Bloco na Rua', Ney Matogrosso retorna aos palcos de BH no BeFly Hall.",
+      "tipo": "Show",
+      "imagem": "img/neymatogrosso.jpg",
+      "data": "2025-08-05",
+      "local": "BeFly Hall",
+      "coordenadas": { "lat": -19.92083, "lng": -43.93778 },
+      "atracoes": ["Ney Matogrosso", "Músicas do álbum 'Bloco na Rua'"],
+      "quando_visitar": "Agosto, durante a turnê nacional.",
+      "dicas": "Chegue com antecedência. O local possui estacionamento.",
+      "guia_basico": ["Ingressos online", "Classificação 16+", "Duração: 1h30"],
+      "link_agendamento": "https://example.com/agendar/neymatogrosso",
+      "link_video": "https://www.youtube.com/watch?v=neymatogrosso_video"
+    },
+    {
+      "nome": "Skank – Turnê de Despedida",
+      "descricao": "A banda mineira se despede dos palcos em um show emocionante no Mineirão.",
+      "tipo": "Show",
+      "imagem": "img/skank.jpg",
+      "data": "2025-07-20",
+      "local": "Estádio Mineirão",
+      "coordenadas": { "lat": -19.86505, "lng": -43.97093 },
+      "atracoes": ["Skank", "Hits clássicos da carreira"],
+      "quando_visitar": "Julho, durante o encerramento da turnê.",
+      "dicas": "Use transporte público devido ao alto fluxo de veículos.",
+      "guia_basico": ["Portões abrem às 18h", "Área VIP e pista", "Classificação 14+"],
+      "link_agendamento": "https://example.com/agendar/skank",
+      "link_video": "https://www.youtube.com/watch?v=skank_video"
+    },
+    {
+      "nome": "Marisa Monte – Portas",
+      "descricao": "Marisa Monte apresenta seu álbum mais recente em uma noite de música e emoção.",
+      "tipo": "Show",
+      "imagem": "img/marisamonte.jpg",
+      "data": "2025-08-12",
+      "local": "Palácio das Artes",
+      "coordenadas": { "lat": -19.93167, "lng": -43.9375 },
+      "atracoes": ["Marisa Monte", "Músicas do álbum 'Portas'"],
+      "quando_visitar": "Agosto, em meio ao inverno cultural de BH.",
+      "dicas": "Garanta o ingresso antecipado. Chegue cedo para bons assentos.",
+      "guia_basico": ["Duração: 2h", "Abertura: 19h30", "Classificação Livre"],
+      "link_agendamento": "https://example.com/agendar/marisamonte",
+      "link_video": "https://www.youtube.com/watch?v=marisamonte_video"
+    },
+    {
+      "nome": "Projota – A Voz da Rua",
+      "descricao": "Projota traz rimas e emoção em show no centro da cidade.",
+      "tipo": "Show",
+      "imagem": "img/projota.jpg",
+      "data": "2025-08-25",
+      "local": "Praça da Estação",
+      "coordenadas": { "lat": -19.92122, "lng": -43.94065 },
+      "atracoes": ["Projota", "Convidados especiais do rap nacional"],
+      "quando_visitar": "Final de agosto, evento gratuito ao ar livre.",
+      "dicas": "Leve água e chegue cedo para bom lugar.",
+      "guia_basico": ["Evento gratuito", "Aberto ao público", "Início às 20h"],
+      "link_agendamento": "https://example.com/agendar/projota",
+      "link_video": "https://www.youtube.com/watch?v=projota_video"
+    }
+  ],
+  "grupo2": [],
+  "grupo3": [],
+  "grupo4": []
+}

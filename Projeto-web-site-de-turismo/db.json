@@ -1,0 +1,23 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "admin",
+      "senha": "123456",
+      "email": "admin@turismo.com"
+    },
+
+        {
+      "id": 2,
+      "usuario": "fabio",
+      "senha": "1",
+      "email": "fabio@gmail.com"
+    },
+    {
+      "id": 2,
+      "usuario": "visitante",
+      "senha": "senha123",
+      "email": "visitante@turismo.com"
+    }
+  ]
+} 

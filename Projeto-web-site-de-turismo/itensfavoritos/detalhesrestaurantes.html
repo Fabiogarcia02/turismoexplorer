@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes dos Restaurantes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function getFavoritos() {
+      return JSON.parse(localStorage.getItem('restaurantesFavoritos') || '[]');
+    }
+
+    function setFavorito(nome) {
+      let favoritos = getFavoritos();
+      if (favoritos.includes(nome)) {
+        favoritos = favoritos.filter(item => item !== nome);
+      } else {
+        favoritos.push(nome);
+      }
+      localStorage.setItem('restaurantesFavoritos', JSON.stringify(favoritos));
+    }
+
+    function isFavoritado(nome) {
+      return getFavoritos().includes(nome);
+    }
+
+    async function carregarRestaurantes() {
+      let grupo = getQueryParam('grupo') || 'grupo1';
+
+      const response = await fetch('restaurantes.json');
+      const data = await response.json();
+
+      const container = document.getElementById('container');
+      container.innerHTML = '';
+
+      if (!data[grupo] || data[grupo].length === 0) {
+        container.innerHTML = `<p>Grupo inválido ou não encontrado.</p>`;
+        return;
+      }
+
+      container.innerHTML = `<div id="${grupo}"></div>`;
+      const grupoContainer = document.getElementById(grupo);
+
+      data[grupo].forEach((restaurante, idx) => {
+        const section = document.createElement('section');
+        const mapaId = `mapa-${grupo}-${idx}`;
+        const favoritado = isFavoritado(restaurante.nome);
+
+        const pratosFamososHTML = restaurante.famosos && restaurante.famosos.length > 0
+          ? `<h3>Pratos Mais Famosos</h3><ul>${restaurante.famosos.map(item => `<li>${item}</li>`).join('')}</ul>`
+          : '';
+
+        section.innerHTML = `
+          <header>
+            ${restaurante.imagem ? `<img src="${restaurante.imagem}" alt="Imagem do restaurante ${restaurante.nome || ''}" />` : ''}
+            <h1>${restaurante.nome || ''}</h1>
+          </header>
+          <div class="content">
+            ${restaurante.descricao ? `<h3>Sobre o Restaurante</h3><p>${restaurante.descricao}</p>` : ''}
+            ${(restaurante.pratos && restaurante.pratos.length) ? `<h3>Pratos Principais</h3><ul>${restaurante.pratos.map(p => `<li>${p}</li>`).join('')}</ul>` : ''}
+            ${pratosFamososHTML}
+            ${restaurante.horario ? `<h3>Horário de Funcionamento</h3><p>${restaurante.horario}</p>` : ''}
+            ${restaurante.preco ? `<h3>Faixa de Preço</h3><p>${restaurante.preco}</p>` : ''}
+            ${(restaurante.telefone || restaurante.email) ? `<h3>Contato</h3><p>${restaurante.telefone ? 'Telefone: ' + restaurante.telefone : ''} ${restaurante.email ? '<br>Email: ' + restaurante.email : ''}</p>` : ''}
+            ${restaurante.coordenadas ? `
+              <div class="map-container">
+                <h3>Localização</h3>
+                <div id="${mapaId}" class="map"></div>
+              </div>
+            ` : ''}
+            <div class="button-group">
+              ${restaurante.cardapio_url ? `<a href="${restaurante.cardapio_url}" target="_blank" class="btn-action">🍽️ Ver Cardápio</a>` : ''}
+              ${restaurante.agendamento_url ? `<a href="${restaurante.agendamento_url}" target="_blank" class="btn-action">📅 Agendar Visita</a>` : ''}
+            </div>
+            <button class="favorite-btn ${favoritado ? 'favorited' : ''}" data-nome="${restaurante.nome}">
+              <span class="star">${favoritado ? '★' : '☆'}</span> Favoritar
+            </button>
+          </div>
+        `;
+
+        grupoContainer.appendChild(section);
+
+        // Inicializa o mapa se houver coordenadas
+        if (restaurante.coordenadas) {
+          setTimeout(() => { // Garante que o elemento existe e tem altura
+            const mapa = L.map(mapaId).setView([restaurante.coordenadas.lat, restaurante.coordenadas.lng], 15);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(mapa);
+            L.marker([restaurante.coordenadas.lat, restaurante.coordenadas.lng]).addTo(mapa)
+              .bindPopup(`<b>${restaurante.nome}</b>`).openPopup();
+            mapa.invalidateSize();
+          }, 100);
+        }
+      });
+
+      container.insertAdjacentHTML('beforeend', `<a href="../index.html" class="btn-back">⬅ Voltar ao Início</a>`);
+
+      document.querySelectorAll('.favorite-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          const nome = this.dataset.nome;
+          setFavorito(nome);
+          this.classList.toggle('favorited');
+          this.querySelector('.star').textContent = this.classList.contains('favorited') ? '★' : '☆';
+        });
+      });
+    }
+
+    carregarRestaurantes();
+  </script>
+</body>
+</html>

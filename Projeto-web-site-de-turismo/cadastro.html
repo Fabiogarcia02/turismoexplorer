@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Turismo Explorer</title>
+  <link rel="stylesheet" href="loguin.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Criar Conta</h2>
+      <form id="form-cadastro">
+        <label for="novo-usuario">Usuário</label>
+        <input type="text" id="novo-usuario" name="usuario" placeholder="Digite seu usuário" required>
+        <label for="novo-email">E-mail</label>
+        <input type="email" id="novo-email" name="email" placeholder="Digite seu e-mail" required>
+        <label for="nova-senha">Senha</label>
+        <input type="password" id="nova-senha" name="senha" placeholder="Digite sua senha" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+      <div class="links">
+        <a href="loguin.html">Já tem conta? Entrar</a>
+      </div>
+      <div id="mensagem-cadastro" style="margin-top:15px;text-align:center;"></div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('form-cadastro').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const usuario = document.getElementById('novo-usuario').value.trim();
+      const email = document.getElementById('novo-email').value.trim();
+      const senha = document.getElementById('nova-senha').value;
+
+      // Verifica se já existe usuário ou email cadastrado
+      const busca = await fetch(`/api/usuarios?usuario=${encodeURIComponent(usuario)}&email=${encodeURIComponent(email)}`);
+      const existentes = await busca.json();
+      if (existentes.length > 0) {
+        document.getElementById('mensagem-cadastro').innerHTML = '<span style="color:red;">Usuário ou e-mail já cadastrado!</span>';
+        return;
+      }
+
+      // Cadastra novo usuário
+      const resposta = await fetch('/api/usuarios', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ usuario, email, senha })
+      });
+
+      if (resposta.ok) {
+        document.getElementById('mensagem-cadastro').innerHTML = '<span style="color:green;">Cadastro realizado com sucesso! Redirecionando...</span>';
+        document.getElementById('form-cadastro').reset();
+        setTimeout(() => {
+          window.location.href = "loguin.html";
+        }, 1500);
+      } else {
+        document.getElementById('mensagem-cadastro').innerHTML = '<span style="color:red;">Erro ao cadastrar. Tente novamente.</span>';
+      }
+    });
+  </script>
+</body>
+</html>

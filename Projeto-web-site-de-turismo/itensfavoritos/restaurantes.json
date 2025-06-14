@@ -1,0 +1,349 @@
+{
+  "grupo1": [
+    {
+      "id": "genarro",
+      "nome": "Genarro Ristorante",
+      "imagem": "img/genarro.jpg",
+      "descricao": "O Genarro Ristorante oferece uma autêntica experiência da culinária italiana no coração de Belo Horizonte. Com pratos clássicos preparados com ingredientes frescos e selecionados, o restaurante proporciona um ambiente acolhedor e sofisticado, ideal para encontros familiares, jantares românticos ou celebrações especiais. A dedicação à tradição italiana é refletida em cada prato, do risoto ao famoso tiramisu, que conquistam o paladar dos clientes mais exigentes.",
+      "pratos": [
+        "Risoto de Funghi",
+        "Spaghetti alla Carbonara",
+        "Lasanha à Bolonhesa",
+        "Fettuccine Alfredo"
+      ],
+      "famosos": [
+        "Pizza Genarro (massa fina e crocante com presunto cru e rúcula)",
+        "Tiramisu da Casa"
+      ],
+      "horario": "Segunda a Sábado: 12h às 23h | Domingo: 12h às 18h",
+      "preco": "R$50 - R$120",
+      "telefone": "(31) 3322-4567",
+      "email": "contato@genarroristorante.com.br",
+      "coordenadas": {
+        "lat": -19.9333,
+        "lng": -43.9408
+      },
+      "cardapio_url": "https://www.tripadvisor.com.br/Restaurant_Review-g303374-d10134733-Reviews-Restaurante_Gennaro-Belo_Horizonte_State_of_Minas_Gerais.html&m=69573#/media/10134733/?albumid=-184&type=ALL_INCLUDING_RESTRICTED&category=-184",
+      "agendamento_url": "https://linktr.ee/restaurantegennaro?utm_source=linktree_profile_share&ltsid=8c066646-77c4-43c5-9712-386bbc9de3b0"
+    },
+    {
+      "id": "pomodori",
+      "nome": "Pomodori Pizza",
+      "imagem": "img/pomodori.jpg",
+      "descricao": "Pomodori Pizza é uma das principais pizzarias artesanais de Belo Horizonte, reconhecida pela qualidade excepcional de suas pizzas feitas com ingredientes frescos e massas preparadas diariamente. O ambiente é descontraído e moderno, perfeito para famílias, grupos de amigos e encontros informais. Além das pizzas tradicionais, a casa oferece opções exclusivas que combinam sabores regionais com a tradição italiana, proporcionando uma experiência gastronômica inesquecível para os amantes de pizza.",
+      "pratos": [
+        "Pizza Margherita",
+        "Pizza Calabresa",
+        "Pizza Quatro Queijos",
+        "Pizza Portuguesa"
+      ],
+      "famosos": [
+        "Pizza de Mussarela com Manjericão",
+        "Pizza de Pepperoni"
+      ],
+      "horario": "Terça a Domingo: 12h às 22h",
+      "preco": "R$60 - R$130",
+      "telefone": "(31) 3333-7890",
+      "email": "contato@pomodoritratttoria.com.br",
+      "coordenadas": {
+        "lat": -19.9280,
+        "lng": -43.9395
+      },
+      "cardapio_url": "https://pomodoripizzaria.com.br/produtos/",
+      "agendamento_url": "https://api.whatsapp.com/send/?phone=553132819299&text&type=phone_number&app_absent=0"
+    },
+    {
+      "id": "massa_fina",
+      "nome": "Massa Fina Ristorante",
+      "imagem": "img/massafina.jpg",
+      "descricao": "Localizado no coração de Belo Horizonte, o Massa Fina Ristorante é conhecido por suas massas frescas e molhos elaborados artesanalmente. Com um ambiente acolhedor e atendimento personalizado, é o lugar ideal para quem busca uma refeição italiana tradicional com toque contemporâneo, perfeita para almoços de negócios ou jantares românticos.",
+      "pratos": [
+        "Penne ao molho Alfredo",
+        "Ravioli de ricota e espinafre",
+        "Lasanha de berinjela",
+        "Tagliatelle ao molho de tomates frescos"
+      ],
+      "famosos": [
+        "Fettuccine ao molho quatro queijos",
+        "Nhoque da casa com ragu de carne"
+      ],
+      "horario": "Segunda a Sexta: 11h30 às 15h | Terça a Domingo: 18h às 23h",
+      "preco": "R$55 - R$110",
+      "telefone": "(31) 3555-6789",
+      "email": "contato@massafina.com.br",
+      "coordenadas": {
+        "lat": -19.9325,
+        "lng": -43.9423
+      },
+      "cardapio_url": "https://massafina.com.br/cardapio",
+      "agendamento_url": "https://massafina.com.br/reservas"
+    },
+    {
+      "id": "il_vicino",
+      "nome": "Il Vicino Massas",
+      "imagem": "img/ilvicino.jpg",
+      "descricao": "O Il Vicino Massas oferece uma experiência autêntica de culinária italiana em Belo Horizonte, com foco em pratos tradicionais de massas caseiras e molhos frescos. O restaurante possui um ambiente agradável e familiar, ideal para quem deseja saborear receitas clássicas e saborosas em um espaço aconchegante e com atendimento dedicado.",
+      "pratos": [
+        "Spaghetti ao sugo",
+        "Lasanha à bolonhesa",
+        "Pappardelle ao ragu de linguiça",
+        "Gnocchi ao molho de tomate fresco"
+      ],
+      "famosos": [
+        "Ravioli recheado com queijo e espinafre",
+        "Fettuccine com molho pesto"
+      ],
+      "horario": "Terça a Domingo: 12h às 22h",
+      "preco": "R$50 - R$120",
+      "telefone": "(31) 3444-5678",
+      "email": "contato@ilvicino.com.br",
+      "coordenadas": {
+        "lat": -19.9295,
+        "lng": -43.9400
+      },
+      "cardapio_url": "https://ilvicino.com.br/cardapio",
+      "agendamento_url": "https://ilvicino.com.br/reservas"
+    }
+  ],
+  "grupo2": [
+    {
+      "id": "udon",
+      "nome": "Udon",
+      "imagem": "img/udon.jpg",
+      "descricao": "O Udon é um dos restaurantes japoneses mais renomados de Belo Horizonte, oferecendo uma fusão entre a culinária tradicional japonesa e toques contemporâneos. Com duas unidades na cidade, destaca-se pelo ambiente sofisticado e pratos inovadores que encantam os paladares mais exigentes.",
+      "pratos": [
+        "Foie gras brulê (sushi de foie gras com brunoise de manga e molho teriyaki)",
+        "Tempura Udon especial de camarão com coco ao molho de caipirinha",
+        "Salmão agridoce com shiitake nirá ao molho de laranja",
+        "Robata de salmão com molho de cogumelos e azeite trufado"
+      ],
+      "famosos": [
+        "Sushi de vieira com shiitake",
+        "Lichia recheada com ovas de salmão"
+      ],
+      "horario": "Segunda a Sexta: 18h às 0h | Sábado e Domingo: 12h às 16h e 18h às 0h",
+      "preco": "R$60 - R$150",
+      "telefone": "(31) 3243-8005",
+      "email": "contato@udonrestaurante.com.br",
+      "coordenadas": {
+        "lat": -19.9380,
+        "lng": -43.9375
+      },
+      "cardapio_url": "https://www.udonrestaurante.com.br/cardapio",
+      "agendamento_url": "https://www.udonrestaurante.com.br/reservas"
+    },
+    {
+      "id": "taika",
+      "nome": "Taika Izakaya",
+      "imagem": "img/taika.jpg",
+      "descricao": "O Taika Izakaya oferece uma experiência gastronômica que mescla a tradição japonesa com influências contemporâneas. Com um ambiente intimista e aconchegante, é o local ideal para apreciar pratos criativos e uma seleção especial de saquês e drinks.",
+      "pratos": [
+        "Sashimi de buri com pimenta jalapeño e massagô",
+        "Robalo grelhado ao curry malaio com arroz basmati",
+        "Pizza de atum fresco com maionese trufada",
+        "Fatias de wagyu seladas na pedra vulcânica com molho ponzu"
+      ],
+      "famosos": [
+        "Sushi de vieira trufada",
+        "Menu degustação com sushis especiais"
+      ],
+      "horario": "Terça a Domingo: 18h às 23h45 (Sexta e Sábado até 1h)",
+      "preco": "R$70 - R$160",
+      "telefone": "(31) 2127-1818",
+      "email": "contato@taikaizakaya.com.br",
+      "coordenadas": {
+        "lat": -19.9540,
+        "lng": -43.9350
+      },
+      "cardapio_url": "https://www.taikaizakaya.com.br/cardapio",
+      "agendamento_url": "https://www.taikaizakaya.com.br/reservas"
+    },
+    {
+      "id": "kinoko",
+      "nome": "Kinoko",
+      "imagem": "img/kinoko.jpg",
+      "descricao": "O Kinoko é o primeiro restaurante japonês em estilo Kaiten (esteira rolante) de Minas Gerais. Localizado no bairro Buritis, oferece uma experiência interativa onde os clientes podem se servir diretamente da esteira, além de contar com opções à la carte em um ambiente climatizado.",
+      "pratos": [
+        "Variedade de sushis e sashimis servidos na esteira",
+        "Temakis personalizados",
+        "Pratos quentes tradicionais japoneses",
+        "Sobremesas típicas"
+      ],
+      "famosos": [
+        "Rodízio estilo Kaiten",
+        "Peças frescas preparadas na hora"
+      ],
+      "horario": "Segunda a Domingo: 11h30 às 15h e 18h às 23h",
+      "preco": "R$50 - R$120",
+      "telefone": "(31) 2555-2626",
+      "email": "contato@kinoko.com.br",
+      "coordenadas": {
+        "lat": -19.9545,
+        "lng": -43.9690
+      },
+      "cardapio_url": "https://kinoko.com.br/cardapio",
+      "agendamento_url": "https://kinoko.com.br/reservas"
+    },
+    {
+      "id": "sushi_naka",
+      "nome": "Sushi Naka",
+      "imagem": "img/sushinaka.jpg",
+      "descricao": "Fundado em 1988, o Sushi Naka é um dos restaurantes japoneses mais tradicionais de Belo Horizonte. Administrado pela família Nakao, oferece um cardápio que preserva a autenticidade da culinária japonesa, com pratos preparados com ingredientes frescos e de alta qualidade.",
+      "pratos": [
+        "Combinado Naka Mini (21 peças)",
+        "Combinado Naka Especial (mais de 60 peças)",
+        "Teishoku especial com tempurá, peixe grelhado e guarnições",
+        "Pratos quentes tradicionais"
+      ],
+      "famosos": [
+        "Teishoku especial",
+        "Combinados variados de sushi e sashimi"
+      ],
+      "horario": "Terça a Domingo: 11h às 14h e 18h às 23h30 (Sábado almoço até 14h30; Domingo 11h às 15h e 18h às 23h)",
+      "preco": "R$50 - R$130",
+      "telefone": "(31) 3287-2714",
+      "email": "contato@sushinaka.com.br",
+      "coordenadas": {
+        "lat": -19.9335,
+        "lng": -43.9300
+      },
+      "cardapio_url": "https://sushinaka.com.br/cardapio",
+      "agendamento_url": "https://sushinaka.com.br/reservas"
+    }
+  ],
+ 
+  "grupo3": [
+    {
+      "id": "glouton",
+      "nome": "Glouton",
+      "imagem": "img/glouton.jpg",
+      "descricao": "O Glouton é um dos restaurantes mais renomados de Belo Horizonte, comandado pelo chef Leo Paixão. A casa oferece uma cozinha contemporânea com forte influência mineira, combinando técnicas francesas e ingredientes regionais.",
+      "pratos": [
+        "Filé curado, foie gras e purê de baroa",
+        "Arroz de rabada com agrião",
+        "Tiradito de peixe do dia",
+        "Tarte Tatin com sorvete de queijo Canastra"
+      ],
+      "famosos": [
+        "Arroz de rabada",
+        "Tarte Tatin"
+      ],
+      "horario": "Terça a Sábado: 12h às 15h e 19h às 23h | Domingo: 12h às 17h",
+      "preco": "R$80 - R$200",
+      "telefone": "(31) 3292-4237",
+      "email": "contato@glouton.com.br",
+      "coordenadas": {
+        "lat": -19.9403,
+        "lng": -43.9336
+      },
+      "cardapio_url": "https://glouton.com.br/cardapio",
+      "agendamento_url": "https://glouton.com.br/reservas"
+    },
+    {
+      "id": "roccana",
+      "nome": "Rocca Delle Macie",
+      "imagem": "img/roccana.jpg",
+      "descricao": "Localizado no bairro de Lourdes, o Rocca é um restaurante elegante que combina ingredientes brasileiros com toques mediterrâneos e italianos. O ambiente é sofisticado e aconchegante, ideal para jantares especiais.",
+      "pratos": [
+        "Risoto de lagostim com açafrão",
+        "Tornedor de filé ao molho trufado",
+        "Pappardelle com ragu de cordeiro",
+        "Tiramisu clássico"
+      ],
+      "famosos": [
+        "Risoto de lagostim",
+        "Tornedor ao molho trufado"
+      ],
+      "horario": "Segunda a Sábado: 12h às 15h e 19h às 23h | Domingo: 12h às 17h",
+      "preco": "R$90 - R$250",
+      "telefone": "(31) 3344-5544",
+      "email": "contato@rocca.com.br",
+      "coordenadas": {
+        "lat": -19.9378,
+        "lng": -43.9389
+      },
+      "cardapio_url": "https://rocca.com.br/cardapio",
+      "agendamento_url": "https://rocca.com.br/reservas"
+    }
+  ],
+  "grupo4": [
+    {
+      "id": "mercearia_lili",
+      "nome": "Mercearia Lili",
+      "imagem": "img/mercearia_lili.jpg",
+      "descricao": "Com decoração nostálgica e um clima retrô, a Mercearia Lili é um dos bares mais charmosos e autênticos de BH. Conhecido por sua feijoada aos sábados, cachaças artesanais e petiscos criativos, o bar é um ponto de encontro de artistas, jornalistas e boêmios. Um verdadeiro clássico da capital mineira.",
+      "pratos": [
+        "Feijoada completa (somente aos sábados)",
+        "Bolinho de feijoada com couve crispy",
+        "Torresmo pururuca com limão",
+        "Moela acebolada na cachaça"
+      ],
+      "famosos": [
+        "Bolinho de feijoada",
+        "Pastel de angu com carne de sol"
+      ],
+      "horario": "Terça a Sexta: 17h às 00h | Sábado: 12h às 00h | Domingo: 12h às 18h",
+      "preco": "R$20 - R$80",
+      "telefone": "(31) 3284-0423",
+      "email": "contato@mercearialili.com",
+      "coordenadas": {
+        "lat": -19.9351,
+        "lng": -43.9382
+      },
+      "cardapio_url": "https://mercearialili.com.br/cardapio",
+      "agendamento_url": "https://mercearialili.com.br/reservas"
+    },
+    {
+      "id": "bar_do_lourdes",
+      "nome": "Bar do Lourdes",
+      "imagem": "img/bar_do_lourdes.jpg",
+      "descricao": "Tradicional e descontraído, o Bar do Lourdes é famoso pelos petiscos bem servidos e pelo atendimento caloroso. A cerveja sempre gelada, os pratos típicos mineiros e a boa música fazem do local um dos mais queridos da cidade, especialmente para quem curte uma roda de samba.",
+      "pratos": [
+        "Frango com quiabo e angu",
+        "Tutu à mineira com torresmo",
+        "Costelinha suína com mandioca frita",
+        "Linguiça artesanal acebolada"
+      ],
+      "famosos": [
+        "Torresmo com limão",
+        "Frango com quiabo"
+      ],
+      "horario": "Terça a Domingo: 11h30 às 22h",
+      "preco": "R$25 - R$90",
+      "telefone": "(31) 3344-3711",
+      "email": "contato@bardolourdes.com.br",
+      "coordenadas": {
+        "lat": -19.9329,
+        "lng": -43.9421
+      },
+      "cardapio_url": "https://bardolourdes.com.br/cardapio",
+      "agendamento_url": "https://bardolourdes.com.br/reservas"
+    },
+    {
+      "id": "bar_du_leo",
+      "nome": "Bar du Leo",
+      "imagem": "img/bar_du_leo.jpg",
+      "descricao": "Um dos botecos mais premiados de BH, o Bar du Leo é famoso pela combinação de petiscos criativos com sabores bem mineiros. O ambiente é simples e acolhedor, com mesas na calçada e clima descontraído. Ideal para quem curte um bom tira-gosto e cerveja trincando.",
+      "pratos": [
+        "Joelho de porco com batata rústica",
+        "Coração de galinha flambado na cachaça",
+        "Bolinho de costela com geleia de pimenta",
+        "Pão de alho recheado com pernil"
+      ],
+      "famosos": [
+        "Joelho de porco crocante",
+        "Costela na brasa com farofa de alho"
+      ],
+      "horario": "Quarta a Domingo: 12h às 22h",
+      "preco": "R$30 - R$100",
+      "telefone": "(31) 98765-4321",
+      "email": "contato@barduleo.com.br",
+      "coordenadas": {
+        "lat": -19.9243,
+        "lng": -43.9438
+      },
+      "cardapio_url": "https://barduleo.com.br/cardapio",
+      "agendamento_url": "https://barduleo.com.br/reservas"
+    }
+  ]
+}

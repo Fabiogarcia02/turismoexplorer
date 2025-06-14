@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos para viagem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+  <img class="logosite" src="logo.png" alt="Voltar para o Home"  />
+</a>
+<body>
+  <div class="wrap">
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="cachoeiracard.jpg">
+        <div class="title-flex">
+          <h3 class="box-title">Turismo Natural</h3>
+          <p class="user-follow-info">🏞️Interior de Minas Gerais</p>
+        </div>
+        <p class="description">O turismo natural é uma forma de viagem voltada para a conexão com a natureza e a
+          valorização de paisagens naturais preservadas. Ideal para quem busca tranquilidade, aventura e experiências
+          autênticas, ele oferece a chance de escapar da correria urbana e mergulhar em cenários únicos, como florestas,
+          cachoeiras, montanhas e rios.É a escolha perfeita para quem quer respirar ar puro, admirar paisagens de tirar
+          o fôlego e viver uma aventura com os pés na terra e o coração cheio.</p>
+      </div>
+      <a href="#" class="button">Conheça as viagens</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="praiacards.jpg">
+        <div class="title-flex">
+          <h3 class="box-title">Turismo nas Praias</h3>
+          <p class="user-follow-info">🌊Rio de Janaiero e Nordeste</p>
+        </div>
+        <p class="description">Areia branca, mar cristalino e brisa suave. O turismo nas praias é a escolha perfeita
+          para quem busca descanso, diversão e paisagens de tirar o fôlego. Seja para relaxar sob o sol, praticar
+          esportes aquáticos ou aproveitar o agito à beira-mar, o litoral oferece experiências que agradam todos os
+          estilos.
+
+          De praias tranquilas e isoladas até destinos badalados com estrutura completa, o cenário litorâneo é ideal
+          para quem quer se reconectar com a natureza sem abrir mão do conforto.</p>
+      </div>
+      <a href="#" class="button">Fique por dentro</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="turismoculturalcard.jpg" alt="Girl Eating Pizza">
+        <div class="title-flex">
+          <h3 class="box-title">Turismo Cultural</h3>
+          <p class="user-follow-info">🏛️Ouro Preto, Salvador, Olinda</p>
+        </div>
+        <p class="description">O turismo cultural é ideal para quem busca experiências que conectam passado e presente
+          por meio da arte, da história e das tradições locais. Esse tipo de viagem leva o visitante a conhecer museus,
+          centros históricos, festas populares e expressões culturais autênticas.
+
+          Com cenários que vão de cidades coloniais a grandes centros urbanos, o turismo cultural oferece a oportunidade
+          de mergulhar nos costumes, na arquitetura e na identidade de cada região.</p>
+      </div>
+      <a href="#" class="button">Conheça os Destinos</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image"
+          src="turismourbanocard.jpg"
+          alt="Girl Eating Pizza">
+        <div class="title-flex">
+          <h3 class="box-title">Turismo Urbano</h3>
+          <p class="user-follow-info">🏙️ Belo - Horizonte e São Paulo</p>
+        </div>
+        <p class="description">O turismo urbano é voltado para quem gosta de explorar o ritmo vibrante das grandes
+          cidades. Entre avenidas movimentadas, edifícios imponentes e bairros cheios de personalidade, esse tipo de
+          turismo oferece experiências culturais, gastronômicas e arquitetônicas intensas.
+
+          De museus e galerias a restaurantes premiados, vida noturna agitada e centros comerciais modernos, o ambiente
+          urbano é perfeito para quem busca diversidade, praticidade e uma programação cheia de possibilidades a cada
+          esquina.</p>
+      </div>
+      <a href="#" class="button">Veja mais</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    let params = new URLSearchParams(location.search)
+    let id = params.get('id')
+    let cidade = cidades.find(c => c.id == id)
+
+    let tela = document.getElementById('tela')
+
+    if (cidade) {
+      tela.innerHTML = `
+        <h1>${cidade.cidade} - ${cidade.estado}</h1>
+        <p><strong>População:</strong> ${cidade.populacao.toLocaleString('pt-BR')} habitantes</p>
+        <img src="imagens/${cidade.cidade.toLowerCase().replaceAll(' ', '')}.jpg" alt="${cidade.cidade}">
+      `
+    } else {
+      tela.innerHTML = `<p><strong>Pagina não encontrada </strong></p>`
+    }
+  </script>
+</body>
+
+</html>

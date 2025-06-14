@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes das Cidades</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function getFavoritos() {
+      return JSON.parse(localStorage.getItem('cidadesFavoritas') || '[]');
+    }
+
+    function setFavorito(nome) {
+      let favoritos = getFavoritos();
+      if (favoritos.includes(nome)) {
+        favoritos = favoritos.filter(item => item !== nome);
+      } else {
+        favoritos.push(nome);
+      }
+      localStorage.setItem('cidadesFavoritas', JSON.stringify(favoritos));
+    }
+
+    function isFavoritado(nome) {
+      return getFavoritos().includes(nome);
+    }
+
+    async function carregarCidades() {
+      const grupo = getQueryParam('grupo');
+      const gruposValidos = ['1', '2', '3', '4'];
+      const response = await fetch('cidades.json');
+      const data = await response.json();
+
+      const container = document.getElementById('container');
+      container.innerHTML = '';
+
+      if (gruposValidos.includes(grupo)) {
+        const grupoKey = `grupo${grupo}`;
+        container.innerHTML = `<div id="${grupoKey}"></div>`;
+        const grupoContainer = document.getElementById(grupoKey);
+
+        data[grupoKey].forEach((cidade, index) => {
+          const section = document.createElement('section');
+          const mapaId = `mapa-${grupoKey}-${index}`;
+          const favoritado = isFavoritado(cidade.nome);
+
+          const guiaBasicoHTML = cidade.guia_basico && cidade.guia_basico.length > 0
+            ? `<h3>Guia Básico para Visitantes</h3><ul>${cidade.guia_basico.map(item => `<li>${item}</li>`).join('')}</ul>`
+            : '';
+
+          section.innerHTML = `
+            <header>
+              <img src="${cidade.imagem}" alt="Imagem de ${cidade.nome}" />
+              <h1>${cidade.nome}</h1>
+            </header>
+            <div class="content">
+              <h3>Sobre o Destino</h3>
+              ${cidade.descricao.map(p => `<p>${p}</p>`).join('')}
+              <h3>Principais Atrações</h3>
+              <ul>${cidade.atracoes.map(item => `<li>${item}</li>`).join('')}</ul>
+              <h3>Quando Visitar</h3>
+              <p>${cidade.quando_visitar}</p>
+              <h3>Dicas Úteis</h3>
+              <p>${cidade.dicas}</p>
+              ${guiaBasicoHTML}
+              <div class="map-container">
+                <h3>Mapa</h3>
+                <div id="${mapaId}" class="map"></div>
+              </div>
+              <button class="favorite-btn ${favoritado ? 'favorited' : ''}" data-nome="${cidade.nome}">
+                <span class="star">${favoritado ? '★' : '☆'}</span> Favoritar
+              </button>
+            </div>
+          `;
+
+          grupoContainer.appendChild(section);
+
+          const mapa = L.map(mapaId).setView([cidade.coordenadas.lat, cidade.coordenadas.lng], 13);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+          }).addTo(mapa);
+          L.marker([cidade.coordenadas.lat, cidade.coordenadas.lng]).addTo(mapa)
+            .bindPopup(`<b>${cidade.nome}</b>`).openPopup();
+          mapa.invalidateSize();
+        });
+
+        container.insertAdjacentHTML('beforeend', `<a href="../index.html" class="btn-back">⬅ Voltar ao Início</a>`);
+
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+          btn.addEventListener('click', function () {
+            const nome = this.dataset.nome;
+            setFavorito(nome);
+            const star = this.querySelector('.star');
+            this.classList.toggle('favorited');
+            star.textContent = this.classList.contains('favorited') ? '★' : '☆';
+          });
+        });
+      } else {
+        container.innerHTML = `<p>Grupo inválido. Por favor, selecione um grupo válido.</p>`;
+      }
+    }
+
+    carregarCidades();
+  </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalhes do Restaurante</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #000;
+      color: wheat;
+      font-family: 'Segoe UI', sans-serif;
+      padding-top: 40px;
+    }
+
+    .restaurant-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+      background-color: #fff;
+      color: #222;
+    }
+
+    .restaurant-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .restaurant-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .card-body h2 {
+      color: #222;
+      font-size: 28px;
+    }
+
+    .card-body p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .tipo {
+      font-weight: bold;
+      color: #6c757d;
+    }
+
+    .avaliacao {
+      color: #e67e22;
+      font-weight: bold;
+    }
+
+    .endereco::before {
+      content: "📍 ";
+    }
+
+    .horarios::before {
+      content: "⏰ ";
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .logosite {
+      width: 60px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .logosite:hover {
+      transform: scale(1.1);
+    }
+
+    .logo-voltar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo que funciona como botão de voltar -->
+  <div class="logo-voltar">
+    <img class="logosite" src="itensfavoritos/logo.png" alt="Voltar" onclick="window.history.back()" />
+  </div>
+
+  <div class="container" id="conteudo"></div>
+
+  <script>
+    const restaurantes = {
+      1: {
+      nome: "Dal Grano",
+      imagem: "img/detalhesdalgrano.png",
+      descricao: "Tradição italiana com o sabor acolhedor da culinária brasileira.",
+      tipo: "Restaurante Italiano",
+      avaliacao: "4.7",
+      endereco: "Av. Pres. Antônio Carlos, 7456 - Pampulha.",
+      horarios: "Segunda a sexta-feira: 11h30 - 15h e 18h - 00h | Sábado e domingo: 12h às 00h"
+    },
+    2: {
+      nome: "Porks - Savassi",
+      imagem: "img/porksoriginal.jpg",
+      descricao: "Carne suína com criatividade e aquele clima de boteco que a gente ama.",
+      tipo: "Comida de boteco com foco em carne suína",
+      avaliacao: "4.2",
+      endereco: "R. Fernandes Tourinho, 19 - Funcionários",
+      horarios: "Segunda a quinta-feira: 17h - 01h | Sexta-feira: 17h às 02h | Sábado e Domingo: 15h - 01h"
+    },
+    3: {
+      nome: "Hamoni Fusion",
+      imagem: "img/hamonioriginal.png",
+      descricao: "Culinária oriental com toques brasileiros em uma experiência gastronômica única.",
+      tipo: "Restaurante Japonês / Fusão Asiática",
+      avaliacao: "4.6",
+      endereco: "Rua Dr. Júlio Otaviano Ferreira, 621 - Cidade Nova, BH",
+      horarios: "Todos os dias: 18h - 00h"
+    },
+    4: {
+      nome: "Exposição La Maison de Clarice",
+      imagem: "img/maisonexposiçao.png", 
+      descricao: "A exposição reúne fragmentos de cartas, entrevistas, imagens, livros e elementos sensoriais da escritora Clarice Lispector. O público pode interagir com QR Codes e enviar mensagens para Clarice, vivendo uma experiência íntima e poética.",
+      tipo: "Exposição Cultural / Literatura",
+      avaliacao: "5.0",
+      endereco: "Rua da Bahia, 1466 – Centro, Belo Horizonte (Academia Mineira de Letras)",
+      horarios: "18 de agosto a 14 de outubro | Sextas e sábados"
+    },
+
+    
+    5: {
+  nome: "Chevrolet Hall (Arena Hall)",
+  imagem: "img/chevrolethalll.jpg", 
+  descricao: "Espaço de eventos e shows em BH que já recebeu grandes nomes da música nacional e internacional. Com capacidade para milhares de pessoas, o local oferece estrutura moderna, acessibilidade e experiências marcantes pra quem ama música ao vivo.",
+  tipo: "Casa de Shows / Espaço de Eventos",
+  avaliacao: "4.5",
+  endereco: "Av. Nossa Sra. do Carmo, 230 – Savassi, Belo Horizonte",
+  horarios: "Horários variam conforme os eventos – consulte a programação oficial"
+},
+
+      6: {
+  nome: "Major Lock Pub",
+  imagem: "img/majorlock.jpg", 
+  descricao: "Um pub temático onde o ambiente nunca é o mesmo: os temas mudam periodicamente, criando experiências imersivas únicas. Carta de drinks autorais, cervejas artesanais e música ao vivo completam o clima perfeito pra curtir com os amigos.",
+  tipo: "Pub / Bar Temático",
+  avaliacao: "4.8",
+  endereco: "Av. do Contorno, 5727 – Savassi, Belo Horizonte",
+  horarios: "Quarta a domingo: 18h - 02h"
+  
+},
+7: {
+  nome: "Serra dos Alves",
+  imagem: "img/serradosalvess.webp",
+  descricao: "Um refúgio natural em meio à Serra do Espinhaço, ideal para quem busca tranquilidade, trilhas e banhos de cachoeira. A vila é charmosa, com paisagens de tirar o fôlego e uma comunidade acolhedora. Perfeito para quem quer se reconectar com a natureza.",
+  tipo: "Natureza / Ecoturismo",
+  avaliacao: "5.0",
+  endereco: "Serra dos Alves – Itabira, Minas Gerais",
+  horarios: "Aberto todos os dias – Melhor visitar durante o dia"
+
+  
+
+
+},
+8: {
+  nome: "João Pessoa",
+  imagem: "img/joaopeople.webp",
+  descricao: "Com águas mornas e calmas, João Pessoa é um verdadeiro paraíso para os amantes de praia. A cidade oferece faixas de areia dourada cercadas por coqueiros e um clima acolhedor o ano inteiro. Entre as mais famosas estão Tambaú, Cabo Branco e Bessa, ideais para banho de mar, esportes aquáticos e passeios de catamarã até as piscinas naturais de Picãozinho. A orla é bem estruturada, com quiosques, ciclovia, calçadão e diversas opções de hospedagem à beira-mar. Um destino perfeito para relaxar e curtir a brisa do litoral nordestino.",
+  tipo: "Praias / Litoral",
+  avaliacao: "4.9",
+  endereco: "João Pessoa – Paraíba, Brasil",
+  horarios: "Aberto todos os dias – Melhor aproveitado durante o dia",
+  video_link: "https://www.instagram.com/reel/DFS5K4UxDIC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+
+},
+9: {
+  
+  nome: "Olinda",
+  imagem: "img/olindalinda.jpg",
+  descricao: "Com um centro histórico riquíssimo e um charme único, Olinda é um verdadeiro patrimônio cultural de Pernambuco. Suas ruas de paralelepípedos, casarios coloridos e igrejas históricas encantam os visitantes. A cidade é conhecida pelo seu famoso Carnaval, que atrai foliões de todo o mundo, e suas praias, como a de Bairro Novo e a do Carmo, oferecem belas paisagens. Além disso, Olinda é repleta de museus, ateliês e mirantes que proporcionam vistas deslumbrantes da capital Recife. Um destino imperdível para quem busca cultura, história e uma atmosfera vibrante.",
+  tipo: "Cultura / Praias",
+  avaliacao: "4.8",
+  endereco: "Olinda – Pernambuco, Brasil",
+  horarios: "Aberto todos os dias – Melhor aproveitado durante o dia",
+
+}
+
+
+    };
+    
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const r = restaurantes[id];
+    const div = document.getElementById("conteudo");
+
+    if (r) {
+      div.innerHTML = `
+  <h1>${r.nome}</h1>
+  <div class="restaurant-card mx-auto" style="max-width: 700px;">
+    <img src="${r.imagem}" alt="${r.nome}" class="restaurant-image">
+    <div class="card-body text-center">
+      <h2>${r.nome}</h2>
+      <p class="tipo">${r.tipo}</p>
+      <p>${r.descricao}</p>
+      <p class="avaliacao">Avaliação: ${r.avaliacao} ⭐</p>
+      <p class="endereco">${r.endereco}</p>
+      <p class="horarios">${r.horarios}</p>
+
+
+
+${'video_link' in r && r.video_link ? `
+        <button 
+     onclick="window.open('${r.video_link}', '_blank')" 
+          style="
+            background-color: wheat;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+          ">
+          Assista ao vídeo sobre ${r.nome}
+        </button>
+        
+      ` : ''}
+    </div>
+  </div>
+`;
+
+
+    } else {
+      div.innerHTML = "<p class='text-center text-danger'>Restaurante não encontrado.</p>";
+    }
+
+
+    
+  </script>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

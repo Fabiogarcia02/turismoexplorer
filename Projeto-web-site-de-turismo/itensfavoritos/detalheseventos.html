@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes dos Eventos</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function getFavoritos() {
+      return JSON.parse(localStorage.getItem('eventosFavoritos') || '[]');
+    }
+
+    function setFavorito(nome) {
+      let favoritos = getFavoritos();
+      if (favoritos.includes(nome)) {
+        favoritos = favoritos.filter(item => item !== nome);
+      } else {
+        favoritos.push(nome);
+      }
+      localStorage.setItem('eventosFavoritos', JSON.stringify(favoritos));
+    }
+
+    function isFavoritado(nome) {
+      return getFavoritos().includes(nome);
+    }
+
+    async function carregarEventos() {
+      const grupo = getQueryParam('grupo');
+      const gruposValidos = ['1', '2', '3', '4'];
+      const response = await fetch('eventos.json');
+      const data = await response.json();
+
+      const container = document.getElementById('container');
+      container.innerHTML = '';
+
+      if (gruposValidos.includes(grupo)) {
+        const grupoKey = `grupo${grupo}`;
+        container.innerHTML = `<div id="${grupoKey}"></div>`;
+        const grupoContainer = document.getElementById(grupoKey);
+
+        data[grupoKey].forEach((evento, index) => {
+          const section = document.createElement('section');
+          const mapaId = `mapa-${grupoKey}-${index}`;
+          const favoritado = isFavoritado(evento.nome);
+
+          const guiaBasicoHTML = evento.guia_basico && evento.guia_basico.length > 0
+            ? `<h3>Guia Básico</h3><ul>${evento.guia_basico.map(item => `<li>${item}</li>`).join('')}</ul>`
+            : '';
+
+          section.innerHTML = `
+            <header>
+              <img src="${evento.imagem}" alt="Imagem do evento ${evento.nome}" />
+              <h1>${evento.nome}</h1>
+            </header>
+            <div class="content">
+              <h3>Descrição</h3>
+              <p>${evento.descricao}</p>
+              <h3>Tipo</h3>
+              <p>${evento.tipo}</p>
+              <h3>Data</h3>
+              <p>${evento.data}</p>
+              <h3>Local</h3>
+              <p>${evento.local}</p>
+              <h3>Atrações</h3>
+              <ul>${evento.atracoes.map(a => `<li>${a}</li>`).join('')}</ul>
+              <h3>Quando Visitar</h3>
+              <p>${evento.quando_visitar}</p>
+              <h3>Dicas</h3>
+              <p>${evento.dicas}</p>
+              ${guiaBasicoHTML}
+              <div class="map-container">
+                <h3>Mapa</h3>
+                <div id="${mapaId}" class="map"></div>
+              </div>
+              <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <button class="favorite-btn ${favoritado ? 'favorited' : ''}" data-nome="${evento.nome}">
+                  <span class="star">${favoritado ? '★' : '☆'}</span> Favoritar
+                </button>
+                <a class="button" href="${evento.link_agendamento || '#'}" target="_blank" rel="noopener noreferrer">Agendar</a>
+                <a class="button" href="${evento.link_video || '#'}" target="_blank" rel="noopener noreferrer">Ver Vídeo</a>
+              </div>
+            </div>
+          `;
+
+          grupoContainer.appendChild(section);
+
+          // Inicializa o mapa
+          const mapa = L.map(mapaId).setView([evento.coordenadas.lat, evento.coordenadas.lng], 13);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+          }).addTo(mapa);
+          L.marker([evento.coordenadas.lat, evento.coordenadas.lng]).addTo(mapa)
+            .bindPopup(`<b>${evento.nome}</b>`).openPopup();
+          mapa.invalidateSize();
+        });
+
+        container.insertAdjacentHTML('beforeend', `<a href="../index.html" class="btn-back">⬅ Voltar ao Início</a>`);
+
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+          btn.addEventListener('click', function () {
+            const nome = this.dataset.nome;
+            setFavorito(nome);
+            const star = this.querySelector('.star');
+            this.classList.toggle('favorited');
+            star.textContent = this.classList.contains('favorited') ? '★' : '☆';
+          });
+        });
+      } else {
+        container.innerHTML = `<p>Grupo inválido. Por favor, selecione um grupo válido.</p>`;
+      }
+    }
+
+    carregarEventos();
+  </script>

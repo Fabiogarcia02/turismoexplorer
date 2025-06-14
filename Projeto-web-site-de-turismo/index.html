@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <time datetime="Turismo explorer"></time>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Turismo Explorer</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu">
+            <h1>Turismo Explorer</h1>
+            <ul id="ulCidades">
+
+                <li><a>Home</a></li>
+                <li id="liturismo"><a>Turismo</a></li>
+                <li id=lirestaurantes><a>Restaurantes</a></li>
+                <li id=lieventos><a>Eventos</a></li>
+                <li id=lieventos><a href="cadastro.html">Cadastros </a></li>
+                <li id=lieventos><a href="loguin.html">Loguin/Logout </a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <div class="carousel">
+
+        <div class="list">
+            <div class="item" style="background-image:url(img/major.png);">
+
+                <div class="content">
+                    <div class="title">Major </div>
+                    <div class="name">Lock</div>
+                    <div class="des">​O Major Lock Pub é um dos ícones da vida noturna de Belo Horizonte, com mais de 30
+                        anos de história. Fundado em 1992, o pub começou na rua Major Lopes, no bairro São Pedro, e em
+                        2022 mudou-se para a rua dos Guajajaras, no Centro da cidade, próximo ao Mercado Central.</div>
+                    <div class="btn">
+                        <button onclick="verDetalhes(6)">Veja mais</button>
+                        <button
+                            onclick="window.location.href='https://www.tiktok.com/@andre_khoury/video/7393758252372118789'">Video</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="item" style="background-image: url(img/serra\ dos\ alves.jpg);">
+
+                <div class="content">
+                    <div class="title">Serra</div>
+                    <div class="name">Dos Alves</div>
+                    <div class="des">Escondida entre montanhas imponentes e paisagens de tirar o fôlego, a Serra dos
+                        Alves é um verdadeiro paraíso para quem busca conexão com a natureza, aventura e tranquilidade
+                        em um só lugar.</div>
+                    <div class="btn">
+                        <button onclick="verDetalhes(7)">Veja mais</button>
+                        <button
+                            onclick="window.location.href='https://youtu.be/OzGtZmt59_Q?si=CpyyOp83kP59wzN9'">Video</button>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="item" style="background-image: url(img/dalgrano.jpg);" alt="Restaurante 1">
+
+                <div class="content">
+                    <div class="title">Dal</div>
+                    <div class="name">Grano</div>
+                    <div class="des"> Um verdadeiro pedacinho da Itália no coração da Pampulha. Combinando a
+                        sofisticação da culinária italiana com o acolhimento mineiro, o restaurante oferece uma
+                        experiência gastronômica memorável, desde o café da manhã até o jantar.</div>
+                    <div class="btn">
+                        <button onclick="verDetalhes(1)">Veja mais</button>
+                        <button
+                            onclick="window.location.href='https://www.instagram.com/reel/DHGjbL_xhTF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='">Video</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="item" style="background-image: url(img/joapessoa.jpg);">
+
+                <div class="content">
+                    <div class="title">João</div>
+                    <div class="name">Pessoa</div>
+                    <div class="des">Localizada no coração do litoral nordestino, João Pessoa é a capital da Paraíba e
+                        um verdadeiro tesouro ainda pouco explorado por muitos. Conhecida como a cidade onde o sol nasce
+                        primeiro, ela está entre os primeiros lugares do continente a receber os raios solares.</div>
+                    <div class="btn">
+                        <button onclick="verDetalhes(8)">Veja mais</button>
+                        <button>Agendar</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image:  url(img/porksbar.jpeg);" alt="Restaurante 2">
+
+                <div class="content">
+                    <div class="title">Porks</div>
+                    <div class="name">Bar</div>
+                    <div class="des"> É uma rede de bares especializada em petiscos à base de
+                        carne suína e chopes artesanais, com forte presença em Belo Horizonte. Inspirado no estilo dos
+                        pubs europeus, o ambiente é descontraído e moderno, com atendimento ágil e sem garçons,
+                        permitindo que os clientes consumam em pé ou nas mesas, inclusive na área externa.</div>
+                    <div class="btn">
+                        <button onclick="verDetalhes(2)">Veja mais</button>
+                        <button
+                            onclick="window.location.href='https://www.instagram.com/reel/DF750_8OWaS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='">Video</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(img/exposiçaocarrosel.jpg);">
+
+                <div class="content">
+                    <div class="title">Exposição</div>
+                    <div class="name">Maison</div>
+                    <div class="des"> Nesta exposição realizada na Galeria da Escola de Belas Artes da UFMG, Fabrício
+                        Fernandino apresenta apenas um fragmento de um amplo conjunto de obras já executadas. Suas
+                        produções revelam um duplo sentido conceitual.</div>
+                    <div class="btn">
+                        <button onclick="verDetalhes(4)">Veja mais</button>
+                        <button
+                            onclick="window.location.href='  https://www.instagram.com/reel/DH8YMblpcY5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='">Video</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(img/hamoni.jpg);" alt="Restaurante 3">
+
+                <div class="content">
+                    <div class="title">Hamoni</div>
+                    <div class="name">Fusion</div>
+                    <div class="des">O Hamoni Fusion, em BH, oferece uma experiência gastronômica refinada com foco na
+                        culinária asiática contemporânea. Em um ambiente sofisticado e intimista, une sabores
+                        tradicionais com releituras modernas, ideal para quem busca elegância e sabor em cada detalhe.
+                    </div>
+                    <div class="btn">
+                        <button onclick="verDetalhes(3)">Veja mais</button>
+                        <button
+                            onclick="window.location.href='https://youtu.be/GuAcqrSFWos?si=7rk6roV2X4xST5S0'">Video</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(img/olinda.jpg);">
+
+                <div class="content">
+                    <div class="title"></div>
+                    <div class="name">Olinda</div>
+                    <div class="des">Olinda, em Pernambuco, é uma joia colonial brasileira. Suas ladeiras de
+                        paralelepípedos, casarões coloridos e igrejas históricas se misturam à efervescência cultural e
+                        artística da cidade. É um lugar onde tradição e criatividade caminham lado a lado, com vista pro
+                        mar e alma nordestina.</div>
+                    <div class="btn">
+                        <button onclick="verDetalhes(9)">Veja mais</button>
+                        <button
+                            onclick="window.location.href='https://youtu.be/h07oXjOVUiY?si=J-WZ2XfxuPV2LOZl'">Video</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="item" style="background-image: url(img/Chevrolet\ Hall.webp);">
+
+                <div class="content">
+                    <div class="title">Chevrolet </div>
+                    <div class="name"> Hall</div>
+                    <div class="des">Com capacidade para até 5.500 pessoas, a Arena Hall é palco de uma ampla variedade
+                        de eventos culturais e artísticos, incluindo shows de artistas renomados como Djonga, Móveis
+                        Coloniais de Acaju e The Show, uma homenagem ao ABBA . Além de sua programação musical, o espaço
+                        também sedia eventos esportivos, feiras e exposições, consolidando-se como um centro
+                        multifuncional de entretenimento em Belo Horizonte.</div>
+                    <div class="btn">
+                        <button onclick="verDetalhes(5)">Veja mais</button>
+                        <button
+                            onclick="window.location.href='https://www.instagram.com/reel/DFS5K4UxDIC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='">Video</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--next prev button-->
+        <div class="arrows">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
+
+
+        <!-- time running -->
+        <div class="timeRunning"></div>
+
+    </div>
+
+    <section class="features">
+
+    </section> <!--final carrosel-->
+
+
+
+
+    </div>
+    <main>
+        <section class="content">
+            <div class="content-block">
+                <img class="restaurantesincriveis" src="img/restaurantesincriveis.jpg" alt="Content Image">
+                <div class="divrestaurantesincriveis">
+                    <h2 class="h2restaurantesincriveis"> Restaurantes Incríveis </h2>
+                    <p>Se você é um amante da boa comida e está sempre em busca <br>de novas experiências gastronômicas,
+                        está no
+                        lugar Perfeito!
+                    </p><br>
+                    <p>🌟 Seleção Exclusiva: Conheça os restaurantes mais<br> badalados da cidade, desde os clássicos
+                        consagrados<br> até os novos queridinhos do momento</p><br>
+                    <p>🍕 Sabores para Todos os Gostos: Opções que vão do tradicional ao moderno, com gastronomia local,
+                        internacional, vegana e muito mais.</p><br>
+                    <p> 💰 Opções para todos os bolsos: Descubra desde restaurantes premiados até aquele cantinho
+                        econômico
+                        que surpreende no sabor.
+
+                    </p>
+                    <div class="buttons">
+                        <a id="btnrestaurantes" class="buttonrestaurantesincriveis">Explore mais</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content-block reverse">
+                <div>
+                    <h2 class="h2lugaresespeciais">Explore Lugares Especiais 🌍</h2>
+
+                    <p>Se você está em busca de aventuras, sabores únicos e lugares inesquecíveis, está no lugar
+                        certo!<br>
+                        Nosso Guia Turístico foi criado especialmente para quem deseja conhecer cada detalhe e
+                        encanto<br>
+                        da cidade, seja você um morador curioso ou até um visitanteencantado por experiências
+                        autênticas.
+                    </p><br>
+                    <p> 🔍 Exploração Completa: Descubra pontos turísticos icônicos, desde monumentos históricos ou até
+                        <br>
+                        recantos escondidos que poucos conhecem.
+                    </p><br>
+                    <p>🎉 Eventos e Festas: Fique por dentro dos eventos que movimentam a cidade, de festivais
+                        culturais,<br>
+                        a
+                        shows e feiras gastronômicas.</p><br>
+                    <p>🚶 Roteiros Personalizados: Seja para um passeio romântico ou uma aventura com os seus
+                        amigos,<br> criamos roteiros sob medida para todos os perfis.</p>
+                    <div class="buttons">
+                        <a id=btnturismo class="buttonlugaresincriveis">Descubra seu local</a>
+
+                    </div>
+
+                </div>
+
+                <img class="lugaresincriveis" src="img/lugaresincriveis.jpg" alt="Content Image">
+            </div>
+            <div class="content-block">
+                <img class="eventos" src="img/kaleb-nimz--5rA4DRrEXU-unsplash.jpg" alt="Content Image">
+                <div class="divrestaurantesincriveis">
+                    <h2 class="h2restaurantesincriveis"> Fique por dentro dos eventos </h2>
+                    <p>Se você adora viver novas experiências e está sempre em busca de bons momentos, chegou ao lugar
+                        certo! Nosso Guia de Eventos foi criado especialmente para quem quer aproveitar ao máximo tudo o
+                        que Belo- Horizonte tem a oferecer, de grandes shows a boates.</p><br>
+                    <p>🎉 Agenda Imperdível: Fique por dentro dos eventos mais incríveis da cidade, desde festivais
+                        famosos até aquelas programações alternativas que são verdadeiros achados.</p><br>
+                    <p>🎭 Diversão para Todos os Estilos: Shows, peças de teatro<br> festas, exposições, eventos
+                        esportivos
+                        e muito mais ,sempre<br> com opções para todos os gostos.</p><br>
+                    <p> 💸 Eventos para Todos os Bolsos: Desde entradas gratuitas até experiências exclusivas, descubra
+                        como se divertir muito sem estourar o orçamento.
+                    </p>
+                    <div class="buttons">
+                        <a id="btneventos" class="buttoneventos">Veja mais..</a>
+        </section>
+        <h2 class="destaques">Turismo</h2>
+
+
+
+        <div class="wrap">
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/cachoeiracard.jpg">
+                    <div class="title-flex">
+                        <h3 class="box-title">Turismo Natural</h3>
+                        <p class="user-follow-info">🏞️Interior de Minas Gerais</p>
+                    </div>
+                    <p class="description">O turismo natural é uma forma de viagem voltada para a conexão com a natureza
+                        e a
+                        valorização de paisagens naturais preservadas. Ideal para quem busca tranquilidade, aventura e
+                        experiências
+                        autênticas, ele oferece a chance de escapar da correria urbana e mergulhar em cenários únicos,
+                        como florestas,
+                        cachoeiras, montanhas e rios.É a escolha perfeita para quem quer respirar ar puro, admirar
+                        paisagens de tirar
+                        o fôlego e vivenciar uma aventura </p>
+                </div>
+                <a href="itensfavoritos/detalhescidades.html?grupo=4" class="button">Conheça as viagens</a>
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/praiacards.jpg">
+                    <div class="title-flex">
+                        <h3 class="box-title">Turismo nas Praias</h3>
+                        <p class="user-follow-info">🌊Rio de Janaiero e Nordeste</p>
+                    </div>
+                    <p class="description">Areia branca, mar cristalino e brisa suave. O turismo nas praias é a escolha
+                        perfeita
+                        para quem busca descanso, diversão e paisagens de tirar o fôlego. Seja para relaxar sob o sol,
+                        praticar
+                        esportes aquáticos ou aproveitar o agito à beira-mar, o litoral oferece experiências que agradam
+                        todos os
+                        estilos.
+
+                        De praias tranquilas e isoladas até destinos badalados com estrutura completa, o cenário
+                        litorâneo é ideal
+                        para quem quer se reconectar com a natureza sem abrir mão do conforto.</p>
+                </div>
+                <a href="itensfavoritos/detalhescidades.html?grupo=3" class="button">Fique por dentro</a>
+
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/turismoculturalcard.jpg" alt="Girl Eating Pizza">
+                    <div class="title-flex">
+                        <h3 class="box-title">Turismo Cultural</h3>
+                        <p class="user-follow-info">🏛️Ouro Preto, Salvador, Olinda</p>
+                    </div>
+                    <p class="description">O turismo cultural é ideal para quem busca experiências que conectam passado
+                        e presente
+                        por meio da arte, da história e das tradições locais. Esse tipo de viagem leva o visitante a
+                        conhecer museus,
+                        centros históricos, festas populares e expressões culturais autênticas.
+
+                        Com cenários que vão de cidades coloniais a grandes centros urbanos, o turismo cultural oferece
+                        a oportunidade
+                        de mergulhar nos costumes, na arquitetura e na identidade de cada região.</p>
+                </div>
+                <a href="itensfavoritos/detalhescidades.html?grupo=1" class="button">Conheça os Destinos</a>
+
+
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/turismourbanocard.jpg" alt="Girl Eating Pizza">
+                    <div class="title-flex">
+                        <h3 class="box-title">Turismo Urbano</h3>
+                        <p class="user-follow-info">🏙️ Belo - Horizonte e São Paulo</p>
+                    </div>
+                    <p class="description">O turismo urbano é voltado para quem gosta de explorar o ritmo vibrante das
+                        grandes
+                        cidades. Entre avenidas movimentadas, edifícios imponentes e bairros cheios de personalidade,
+                        esse tipo de
+                        turismo oferece experiências culturais, gastronômicas e arquitetônicas intensas.
+
+                        De museus e galerias a restaurantes premiados, vida noturna agitada e centros comerciais
+                        modernos, o ambiente
+                        urbano é perfeito para quem busca diversidade, praticidade e uma programação cheia de
+                        possibilidades.</p>
+                </div>
+                <a href="itensfavoritos/detalhescidades.html?grupo=2" class="button">Veja mais</a>
+
+            </div>
+        </div>
+        <h2 class="destaques">Restaurantes</h2>
+
+        <div class="wrap">
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/cardrestauranteitaliano.jpg">
+                    <div class="title-flex">
+                        <h3 class="box-title">🍝 Restaurantes Italianos</h3>
+                        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+                    </div>
+                    <p class="description">Sabores autênticos da Itália em cada detalhe. Os restaurantes italianos
+                        oferecem uma
+                        verdadeira viagem gastronômica, com massas frescas feitas artesanalmente, pizzas assadas em
+                        forno à lenha,
+                        risotos cremosos e antepastos irresistíveis. A culinária é marcada pelo uso de ingredientes
+                        frescos, molhos
+                        encorpados e temperos aromáticos, tudo servido em ambientes acolhedores que remetem às
+                        tradicionais
+                        trattorias.Perfeito para quem aprecia boa comida em ambientes acolhedores e cheios de charme,  levando diretamente a italia para BH.
+                         </p>
+                </div>
+                <a href="itensfavoritos/detalhesrestaurantes.html?grupo1" class="button">Conheça os restaurantes</a>
+
+
+
+
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/japonescard.jpg">
+                    <div class="title-flex">
+                        <h3 class="box-title">🍣 Restaurantes Japoneses</h3>
+                        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+                    </div>
+                    <p class="description">Delicadeza, tradição e sabor em perfeita harmonia. Os restaurantes japoneses
+                        oferecem uma
+                        experiência sensorial única, com pratos cuidadosamente preparados, como sushis, sashimis,
+                        temakis e pratos
+                        quentes como lámen, udon e yakisoba. A culinária japonesa valoriza a estética, o frescor dos
+                        ingredientes e o
+                        equilíbrio entre texturas e sabores. Seja em ambientes sofisticados ou mais descontraídos, é a
+                        escolha ideal
+                        para quem aprecia uma alimentação leve, refinada e cheia de significado cultural.</p>
+                </div>
+                <a href="itensfavoritos/detalhesrestaurantes.html?grupo=grupo2" class="button">Conheça os restaurantes</a>
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/refinadoscard.png" alt="Girl Eating Pizza">
+                    <div class="title-flex">
+                        <h3 class="box-title">🍷 Restaurantes Refinados</h3>
+                        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+                    </div>
+                    <p class="description">Experiências gastronômicas de alto nível, onde cada prato é pensado nos
+                        mínimos detalhes.
+                        Os restaurantes refinados oferecem menus elaborados por chefs renomados, com técnicas
+                        sofisticadas,
+                        apresentação impecável e sabores surpreendentes. O ambiente é elegante, o atendimento é
+                        atencioso e o clima
+                        convida a momentos especiais, seja para um jantar a dois, uma celebração importante ou
+                        simplesmente para quem
+                        aprecia o melhor da alta gastronomia. Ideal para quem valoriza qualidade e exclusividade .</p>
+                </div>
+                <a href="#" class="button">Conheça os restaurantes</a>
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/bootecoscard.jpg" alt="Girl Eating Pizza">
+                    <div class="title-flex">
+                        <h3 class="box-title">🍻 Comida de Boteco</h3>
+                        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+                    </div>
+                    <p class="description">Mais que lugares para comer e beber, os botecos fazem parte da alma
+                        brasileira. São
+                        espaços descontraídos e acolhedores, onde a comida ganha o sabor da tradição e da
+                        convivialidade. Os petiscos
+                        são os grandes protagonistas: torresmo crocante, bolinhos recheados, linguiça na chapa, mandioca
+                        frita,
+                        pastéis e tantas outras delícias que acompanham perfeitamente uma boa cerveja gelada. Em cada
+                        mesa, histórias,
+                        risadas e uma culinária simples, mas cheia de identidade e afeto. Perfeito para quem valoriza o
+                        encontro, o
+                        sabor e o espírito boêmio da cidade.</p>
+                </div>
+                <a href="itensfavoritos/detalhesrestaurantes.html?grupo=grupo3" class="button">Conheça os restaurantess</a>
+            </div>
+        </div>
+        <h2 class="destaques">Eventos </h2>
+
+        <div class="wrap">
+
+            <div class="box">
+
+                <div class="box-top">
+                    <img class="box-image" src="img/showscard.jpg">
+                    <div class="title-flex">
+                        <h3 class="box-title">🎤 Shows ao Vivo</h3>
+                        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+                    </div>
+                    <p class="description">Momentos intensos de conexão entre artista e público. Os shows ao vivo trazem
+                        emoção,
+                        energia e música em seu estado mais puro, seja em grandes palcos, eventos ao ar livre ou espaços
+                        mais
+                        intimistas. Cada apresentação é uma experiência única, onde luzes, vozes e aplausos se misturam
+                        criando memórias
+                        inesquecíveis. Ideal para quem busca vibração, cultura e a sensação de estar presente em algo
+                        especial. Do pop
+                        ao samba, do rock à MPB.
+                    </p>
+                </div>
+                <a href="itensfavoritos/detalheseventos.html?grupo=1" class="button">Conheça os Locais</a>
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/baladascard.jpg">
+                    <div class="title-flex">
+                        <h3 class="box-title">🕺 Casas Noturnas e Baladas</h3>
+                        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+                    </div>
+                    <p class="description">Quando a noite cai, a cidade ganha outra energia. As casas noturnas e baladas
+                        são o ponto
+                        de encontro para quem busca música alta, pista cheia e muita diversão. Com iluminação envolvente
+                        e ambientes
+                        variados, essas experiências noturnas vão de festas dançantes a encontros descontraídos com os
+                        amigos. Ideal
+                        para quem quer dançar, socializar e viver intensamente até o amanhecer. Cada noite é uma nova
+                        história, um novo
+                        ritmo, um novo cenário para se jogar.</p>
+                </div>
+                <a href="#" class="button">Fique por dentro</a>
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/exposiçoescard.jpg" alt="Girl Eating Pizza">
+                    <div class="title-flex">
+                        <h3 class="box-title">🖼️ Exposições de Arte e Cultura</h3>
+                        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+                    </div>
+                    <p class="description">As exposições são convites para mergulhar em universos criativos, históricos
+                        e sensoriais.
+                        De mostras de arte contemporânea a exposições fotográficas e temáticas, esses espaços oferecem
+                        uma pausa no
+                        cotidiano e provocam novos olhares sobre o mundo. Seja em museus, galerias ou centros culturais
+                        alternativos,
+                        cada visita é uma experiência única , repleta de estética, reflexão e expressão. Ideal para quem
+                        aprecia
+                        cultura e valoriza o tempo de contemplação.</p>
+                </div>
+                <a href="#" class="button">Conheça os Destinos</a>
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="img/eventosarlivrecard.png">
+                    <div class="title-flex">
+                        <h3 class="box-title">🏞️ Eventos ao Ar Livre</h3>
+                        <p class="user-follow-info">🏙️ Belo - Horizonte </p>
+                    </div>
+                    <p class="description">Perfeitos para quem busca lazer, bem-estar e conexão com a natureza, os
+                        eventos ao ar livre
+                        oferecem experiências únicas em ambientes abertos e inspiradores. De piqueniques e aulas de yoga
+                        em praças, a
+                        feiras culturais, trilhas guiadas e sessões de cinema sob as estrelas, essas atividades reúnem
+                        pessoas em
+                        espaços públicos com uma atmosfera leve e descontraída. São oportunidades ideais para aproveitar
+                        o dia, respirar
+                        ar puro e vivenciar a cidade de uma forma diferente. </p>
+                </div>
+                <a href="#" class="button">Veja mais</a>
+            </div>
+        </div>
+
+
+        <section class="articles">
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img src="img/casasnoturnas.jpg" alt="Descrição da imagem 1" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>Hospedagem</h2>
+                        <p>
+                            Descubra os melhores bares e baladas da cidade! Com música ao vivo, DJs renomados e
+                            ambientes
+                            vibrantes, aproveite noites inesquecíveis nos points mais badalados.
+                        </p>
+                        <a href="#" class="read-more">
+                            <span class="sr-only">sobre Título do Artigo 1</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img src="img/destinosunicos.png" alt="Descrição da imagem 2" />
+                    </figure>
+                    <div class="article-body">
+                        <h2> Pacotes Turisticos</h2>
+                        <p>
+                            Uma viagem gastronômica pelos sabores mais autênticos do mundo! Encontre e reserve
+                            restaurantes
+                            que oferecem pratos típicos de diversas culturas e surpreenda seu paladar.
+                        </p>
+                        <a href="#" class="read-more">
+                            <span class="sr-only">sobre Título do Artigo 2</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="article-wrapper">
+                    <figure>
+                        <img src="img/paisagens.jpg" alt="Descrição da imagem 3" />
+                    </figure>
+                    <div class="article-body">
+                        <h2>Dicas para Viagem</h2>
+                        <p>
+                            Conecte-se com a natureza e explore destinos paradisíacos. Trilhas, cachoeiras, montanhas e
+                            muito mais esperam por você para experiências ao ar livre únicas e revitalizantes.
+                        </p>
+                        <a href="#" class="read-more">
+                            <span class="sr-only">sobre Título do Artigo 3</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="espaçamento"></div>
+
+
+        <footer class="footer">
+            <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+                <!-- Caixa de Autoria -->
+                <div class="autoria">
+                    <h4>Autoria</h4>
+                    <div class="perfil">
+                        <img class="bonequin" src="img/bonequin.png" alt="ícone de perfil">
+                        <div class="info">
+                            <p><strong>Aluno:</strong> Fábio Garcia Martins</p>
+                            <p><strong>Curso:</strong> Engenharia de Software</p>
+                            <p><strong>Turma:</strong> Manhã</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caixa Sobre Mim -->
+                <div class="sobre-mim">
+                    <h4>Sobre Mim</h4>
+                    <p>
+                        Tenho 18 anos, sou fluente em espanhol e possuo nível intermediário em inglês. Desde pequeno,
+                        sempre
+                        tive um grande interesse por tecnologia, o que me motivou a buscar conhecimento e aprender cada
+                        vez
+                        mais sobre esse meio. Pretendo seguir carreira nessa área e me tornar um profissional capacitado
+                        e
+                        preparado para enfrentar os desafios do mercado.
+                </div>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="redes-sociais">
+                <span>Redes Sociais:</span>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="img/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+            </div>
+
+            <!-- Texto e links -->
+            <h2>Esperamos pelo seu agendamento!</h2>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Serviço</a>
+                <a href <! -- JAVA SCRIPT -->
+
+                    <script>
+                        function verDetalhes(id) {
+                            window.location.href = `detalhes.html?id=${id}`;
+                        }
+                        let cidades = [
+                            {
+                                id: 1,
+                                cidade: "Belo Horizonte",
+                                estado: "MG",
+                                populacao: 3800000,
+                                imagem: "imagens/bh.jpg",
+                                descricao: "A capital de Minas Gerais, conhecida pela culinária e hospitalidade."
+                            },
+                            {
+                                id: 2,
+                                cidade: "São Paulo",
+                                estado: "SP",
+                                populacao: 11800000,
+                                imagem: "imagens/sp.jpg",
+                                descricao: "Maior cidade do Brasil, cheia de cultura, gastronomia e oportunidades."
+                            }
+                            // outras cidades...
+                        ];
+
+                        let params = new URLSearchParams(location.search);
+                        let id = params.get('id');
+
+                        let cidade = cidades.find(function (elem) { return elem.id == id });
+
+                        let tela = document.getElementById('tela');
+
+                        if (cidade) {
+                            tela.innerHTML = `
+        <h1>${cidade.cidade} - ${cidade.estado}</h1>
+        <img src="${cidade.imagem}" alt="${cidade.cidade}">
+        <p><strong>População:</strong> ${cidade.populacao.toLocaleString('pt-BR')} habitantes</p>
+        <p>${cidade.descricao}</p>
+      `;
+                        } else {
+                            tela.innerHTML = `<p>Cidade não encontrada</p>`;
+                        }
+
+                        fetch("http://localhost:3000/destinos")
+                            .then(response => response.json())
+                            .then(destinos => {
+                                const container = document.getElementById("destinos-container");
+                                destinos.forEach(destino => {
+                                    const div = document.createElement("div");
+                                    div.className = "destino";
+                                    div.innerHTML = `
+            <h2>${destino.nome}</h2>
+            <p>${destino.descricao}</p>
+            <img src="${destino.imagem}" alt="${destino.nome}">
+          `;
+                                    container.appendChild(div);
+                                });
+                            })
+                            .catch(error => {
+                                console.error("Erro ao buscar destinos:", error);
+                            });
+
+
+
+                    </script>
+</body>
+
+</html>
+<script src="app.js"></script>
+
+</body>
+
+</html>

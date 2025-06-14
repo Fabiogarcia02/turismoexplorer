@@ -1,0 +1,328 @@
+{
+  "grupo1": [
+    {
+      "id": "grupo1",
+      "nome": "Salvador",
+      "imagem": "imgdestaques/salvador.jpg",
+      "descricao": [
+        "Salvador, capital da Bahia, é uma das cidades mais vibrantes do Brasil, com uma herança cultural afro-brasileira muito rica.",
+        "A cidade destaca-se pela arquitetura colonial portuguesa, igrejas barrocas, e praias deslumbrantes, que atraem turistas o ano todo.",
+        "Sua música, como o axé e o samba-reggae, é pulsante e faz parte do cotidiano local, especialmente nas festas de Carnaval e no Pelourinho.",
+        "A culinária baiana é uma atração à parte, com pratos típicos como acarajé, moqueca e vatapá, que podem ser encontrados em mercados e restaurantes locais."
+      ],
+      "atracoes": [
+        "Pelourinho",
+        "Elevador Lacerda",
+        "Igreja do Bonfim",
+        "Praia do Porto da Barra",
+        "Mercado Modelo",
+        "Forte São Marcelo"
+      ],
+      "quando_visitar": "O melhor período para visitar é entre setembro e março, com clima quente e festas culturais, especialmente o Carnaval.",
+      "dicas": "Explore a culinária local, participe das rodas de samba e aproveite o centro histórico com guias turísticos para entender a fundo a história da cidade.",
+      "coordenadas": { "lat": -12.9714, "lng": -38.5014 },
+      "guia_basico": [
+        "Chegue cedo no Pelourinho para evitar multidões e aproveite para visitar museus locais.",
+        "Use roupas leves e protetor solar, especialmente se for para praias e passeios ao ar livre.",
+        "Não deixe de provar o acarajé nas barracas da Rua da Carioca.",
+        "Para deslocamentos, prefira táxi ou aplicativos confiáveis à noite.",
+        "Visite o Mercado Modelo para artesanatos e lembranças."
+      ]
+    },
+     {
+      "id": "grupo1",
+      "nome": "Paraty",
+      "imagem": "imgdestaques/paraty.jpg",
+      "descricao": [
+        "Paraty, no litoral do Rio de Janeiro, é uma cidade histórica famosa por seu centro colonial preservado e seu charme artístico.",
+        "As ruas de pedra, casarões coloniais e igrejas datam do ciclo do ouro e atraem turistas que buscam cultura e história.",
+        "A cidade é palco de eventos culturais importantes, como a FLIP (Festa Literária Internacional de Paraty).",
+        "Além do patrimônio histórico, Paraty oferece belas praias, cachoeiras e opções de ecoturismo na região."
+      ],
+      "atracoes": [
+        "Centro Histórico de Paraty",
+        "Igreja de Santa Rita",
+        "Caminho do Ouro",
+        "Praias de Paraty",
+        "Forte Defensor Perpétuo",
+        "Casa da Cultura"
+      ],
+      "quando_visitar": "O período de abril a novembro tem clima mais seco, ideal para turismo cultural e passeios ao ar livre.",
+      "dicas": "Use calçados confortáveis para caminhar pelas ruas de pedra, participe da FLIP se estiver na época, e aproveite os passeios de barco pela baía.",
+      "coordenadas": { "lat": -23.2207, "lng": -44.7163 },
+      "guia_basico": [
+        "Explore o centro histórico a pé para apreciar a arquitetura colonial.",
+        "Visite a Igreja de Santa Rita e o Forte Defensor Perpétuo para conhecer a história local.",
+        "Faça um passeio de barco para conhecer as praias e ilhas próximas.",
+        "Aproveite a gastronomia local com pratos à base de frutos do mar.",
+        "Não perca os eventos culturais e festivais durante o ano."
+      ]
+    },
+    {
+      "id": "grupo1",
+      "nome": "Ouro Preto",
+      "imagem": "imgdestaques/ouropreto.jpg",
+      "descricao": [
+        "Ouro Preto, em Minas Gerais, é um marco da história do Brasil colonial e do ciclo do ouro, com seu conjunto arquitetônico barroco excepcional.",
+        "A cidade é Patrimônio Mundial da UNESCO e encanta pela sua topografia com ladeiras íngremes, pontes e ruas de pedra.",
+        "Museus, igrejas e festivais culturais revelam o passado e a arte mineira, tornando o turismo cultural o foco principal.",
+        "Além do turismo histórico, Ouro Preto oferece gastronomia mineira e opções de ecoturismo e trilhas próximas."
+      ],
+      "atracoes": [
+        "Museu da Inconfidência",
+        "Igreja São Francisco de Assis",
+        "Mina du Veloso",
+        "Praça Tiradentes",
+        "Teatro Municipal",
+        "Parque Natural Municipal das Andorinhas"
+      ],
+      "quando_visitar": "De maio a setembro, clima seco e ideal para explorar as atrações históricas e trilhas naturais.",
+      "dicas": "Use calçados confortáveis, evite salto; aproveite para provar o pão de queijo e doce de leite em confeitarias locais.",
+      "coordenadas": { "lat": -20.3856, "lng": -43.5039 },
+      "guia_basico": [
+        "Comece seu passeio pela Praça Tiradentes, coração da cidade.",
+        "Contrate um guia local para entender a história das igrejas e museus.",
+        "Não deixe de visitar a Mina du Veloso para um passeio subterrâneo.",
+        "Prove a culinária local em restaurantes tradicionais próximos ao centro.",
+        "Se estiver disposto, faça trilhas no Parque das Andorinhas para uma vista panorâmica."
+      ]
+    }
+  ],
+  "grupo2": [
+    {
+      "id": "grupo2",
+      "nome": "Belo Horizonte",
+      "imagem": "imgdestaques/bh.webp",
+      "descricao": [
+        "Belo Horizonte, capital de Minas Gerais, é uma cidade que combina modernidade com tradição cultural e gastronômica.",
+        "Conhecida por seus amplos parques, arquitetura modernista e vida cultural ativa, BH oferece uma experiência urbana rica e diversificada.",
+        "A gastronomia é destaque, com bares tradicionais, especialmente na região da Savassi, onde se prova o famoso pão de queijo e o torresmo.",
+        "Eventos musicais e culturais acontecem o ano todo, atraindo moradores e turistas para uma agenda cheia."
+      ],
+      "atracoes": [
+        "Praça da Liberdade",
+        "Parque das Mangabeiras",
+        "Mercado Central",
+        "Conjunto Arquitetônico da Pampulha",
+        "Mirante do Mangabeiras",
+        "Circuito Cultural Praça da Liberdade"
+      ],
+      "quando_visitar": "Entre abril e setembro, período com clima mais seco e ameno, ideal para caminhadas e passeios ao ar livre.",
+      "dicas": "Visite o Mercado Central para comprar produtos típicos e aproveitar a culinária local. Explore os parques e mirantes para vistas panorâmicas.",
+      "coordenadas": { "lat": -19.9167, "lng": -43.9345 },
+      "guia_basico": [
+        "Comece pela Praça da Liberdade, com seus jardins e museus.",
+        "Não deixe de visitar a Lagoa da Pampulha e seus edifícios modernistas.",
+        "Prove o pão de queijo em padarias tradicionais pela manhã.",
+        "Aproveite a vida noturna na Savassi com bares e música ao vivo.",
+        "Use transporte público ou apps para se locomover com segurança."
+      ]
+    },
+    {
+      "id": "grupo2",
+      "nome": "São Paulo",
+      "imagem": "imgdestaques/saopaulo.jpg",
+      "descricao": [
+        "São Paulo é a maior cidade do Brasil, centro econômico e cultural, famosa pela diversidade e agitação constante.",
+        "A metrópole oferece museus de renome mundial, vida noturna intensa, gastronomia global e uma agenda cultural sempre cheia.",
+        "A Avenida Paulista é o coração da cidade, com prédios modernos, parques e eventos frequentes para todos os gostos.",
+        "A cidade tem bairros que refletem a diversidade cultural do Brasil e do mundo, como a Liberdade e a Vila Madalena."
+      ],
+      "atracoes": [
+        "Museu de Arte de São Paulo (MASP)",
+        "Parque Ibirapuera",
+        "Mercadão Municipal",
+        "Avenida Paulista",
+        "Bairro da Liberdade",
+        "Vila Madalena"
+      ],
+      "quando_visitar": "São Paulo é vibrante o ano todo; clima ameno entre março e maio é o mais confortável para turismo.",
+      "dicas": "Use transporte público para evitar trânsito. Prove a pizza paulistana e visite feiras culturais nos finais de semana.",
+      "coordenadas": { "lat": -23.5505, "lng": -46.6333 },
+      "guia_basico": [
+        "Comece pela Avenida Paulista, visitando o MASP e o Parque Trianon.",
+        "Passeie pelo Parque Ibirapuera para relaxar e ver arte moderna.",
+        "Explore o bairro da Liberdade para conhecer a cultura japonesa.",
+        "Aproveite a vida noturna na Vila Madalena com bares e arte de rua.",
+        "Experimente a pizza em pizzarias tradicionais como a Bráz."
+      ]
+    }
+  ],
+  "grupo3": [
+  {
+    "id": "grupo3",
+    "nome": "Rio de Janeiro",
+    "imagem": "imgdestaques/rio.jpg",
+    "descricao": [
+      "O Rio de Janeiro é conhecido mundialmente por suas praias icônicas, como Copacabana e Ipanema, e sua exuberante paisagem natural.",
+      "A cidade oferece uma mistura única de cultura, natureza e vida urbana, com destaque para o Cristo Redentor e o Pão de Açúcar.",
+      "O Carnaval do Rio é uma das maiores festas populares do mundo, atraindo milhões de turistas todos os anos.",
+      "Além das praias, o Rio conta com parques, museus e uma culinária diversificada."
+    ],
+    "atracoes": [
+      "Praia de Copacabana",
+      "Cristo Redentor",
+      "Pão de Açúcar",
+      "Praia de Ipanema",
+      "Jardim Botânico",
+      "Maracanã"
+    ],
+    "quando_visitar": "O melhor período é entre maio e outubro, com clima mais seco e menos chuvas, ideal para aproveitar as praias e passeios ao ar livre.",
+    "dicas": "Evite áreas perigosas à noite, use protetor solar, e aproveite para experimentar a feijoada em restaurantes tradicionais.",
+    "coordenadas": { "lat": -22.9068, "lng": -43.1729 },
+    "guia_basico": [
+      "Visite o Cristo Redentor logo pela manhã para evitar multidões.",
+      "Faça o passeio de bondinho no Pão de Açúcar para vistas espetaculares.",
+      "Aproveite para caminhar pelo calçadão de Copacabana ao entardecer.",
+      "Conheça a Lapa para uma noite animada com música ao vivo.",
+      "Não deixe de experimentar a caipirinha e o pão de queijo local."
+    ]
+  },
+  {
+    "id": "grupo3",
+    "nome": "Fortaleza",
+    "imagem": "imgdestaques/fortaleza.jpg",
+    "descricao": [
+      "Fortaleza é uma das cidades mais visitadas do Nordeste, famosa por suas praias urbanas e vida noturna vibrante.",
+      "A Praia do Futuro é conhecida pelas barracas que oferecem comidas típicas e música ao vivo.",
+      "O Centro Dragão do Mar de Arte e Cultura é ponto cultural importante com museus e teatro.",
+      "Fortaleza também é um ótimo ponto de partida para conhecer outras praias e dunas da região."
+    ],
+    "atracoes": [
+      "Praia do Futuro",
+      "Praia de Iracema",
+      "Centro Dragão do Mar",
+      "Feira de Artesanato da Beira Mar",
+      "Cumbuco (praia próxima)",
+      "Mercado Central"
+    ],
+    "quando_visitar": "Entre julho e dezembro o clima é mais seco e agradável para passeios ao ar livre e praia.",
+    "dicas": "Prove a tapioca e o peixe fresco, e aproveite as feiras para comprar artesanato local.",
+    "coordenadas": { "lat": -3.71722, "lng": -38.5434 },
+    "guia_basico": [
+      "Passeie pela orla da Praia do Futuro e experimente as barracas locais.",
+      "Visite o Centro Dragão do Mar para exposições e eventos culturais.",
+      "Aproveite o pôr do sol na Praia de Iracema.",
+      "Compre lembranças no Mercado Central e na Feira da Beira Mar.",
+      "Use protetor solar e beba muita água durante os passeios."
+    ]
+  },
+  {
+    "id": "grupo3",
+    "nome": "Natal",
+    "imagem": "imgdestaques/natal.jpg",
+    "descricao": [
+      "Natal, capital do Rio Grande do Norte, é conhecida pelas suas praias de areia branca e dunas impressionantes.",
+      "O Forte dos Reis Magos é um ponto histórico e turístico muito visitado.",
+      "A cidade oferece opções de ecoturismo e passeios de buggy nas dunas.",
+      "As praias de Ponta Negra e Genipabu são famosas por sua beleza e infraestrutura turística."
+    ],
+    "atracoes": [
+      "Praia de Ponta Negra",
+      "Forte dos Reis Magos",
+      "Dunas de Genipabu",
+      "Parque das Dunas",
+      "Praia do Cotovelo",
+      "Mercado de Artesanato de Natal"
+    ],
+    "quando_visitar": "Entre agosto e dezembro o clima é mais seco e ideal para aproveitar as praias e os passeios ao ar livre.",
+    "dicas": "Não deixe de fazer o passeio de buggy nas dunas e experimentar a culinária local, especialmente pratos com frutos do mar.",
+    "coordenadas": { "lat": -5.7945, "lng": -35.211 },
+    "guia_basico": [
+      "Visite o Forte dos Reis Magos para uma aula de história e vistas para o mar.",
+      "Faça o passeio de buggy nas dunas de Genipabu com guia autorizado.",
+      "Aproveite a infraestrutura da Praia de Ponta Negra para esportes e lazer.",
+      "Compre artesanato local no Mercado de Natal para lembranças únicas.",
+      "Leve protetor solar e roupas leves para os passeios."
+    ]
+  }
+],
+"grupo4": [
+  {
+    "id": "grupo4",
+    "nome": "Capitólio",
+    "imagem": "imgdestaques/capitolio.jpg",
+    "descricao": [
+      "Capitólio é conhecido como o 'mar de Minas' devido às suas paisagens de lagos formados pela represa de Furnas.",
+      "A região é famosa pelas incríveis cachoeiras, cânions e passeios de barco.",
+      "Um destino ideal para ecoturismo, com trilhas e esportes aquáticos em meio à natureza exuberante."
+    ],
+    "atracoes": [
+      "Cachoeira Lagoa Azul",
+      "Cânion do Lago de Furnas",
+      "Trilha do Sol",
+      "Passeio de barco pela represa de Furnas",
+      "Cachoeira do Filó",
+      "Mirante dos Canyons"
+    ],
+    "quando_visitar": "O melhor período é entre abril e setembro, quando o clima está mais seco e propício para passeios ao ar livre.",
+    "dicas": "Use roupas leves e confortáveis para trilhas, leve repelente e aproveite para fazer passeios guiados para conhecer as cachoeiras com segurança.",
+    "coordenadas": { "lat": -20.7455, "lng": -46.0803 },
+    "guia_basico": [
+      "Faça o passeio de lancha pela represa para conhecer os cânions e as praias de água doce.",
+      "Visite as cachoeiras pela manhã para evitar multidões.",
+      "Use protetor solar e leve água durante as trilhas.",
+      "Experimente a gastronomia local com pratos típicos mineiros.",
+      "Respeite as sinalizações e preserve a natureza."
+    ]
+  },
+  {
+    "id": "grupo4",
+    "nome": "São Tomé das Letras",
+    "imagem": "imgdestaques/saotome.jpg",
+    "descricao": [
+      "São Tomé das Letras é famosa por sua energia mística, belas paisagens rochosas e cachoeiras refrescantes.",
+      "A cidade atrai turistas que buscam contato com a natureza, caminhadas e práticas alternativas.",
+      "Além das cachoeiras, tem grutas e mirantes com vistas panorâmicas inesquecíveis."
+    ],
+    "atracoes": [
+      "Cachoeira Eubiose",
+      "Gruta do Carimbado",
+      "Mirante da Antena",
+      "Cachoeira Véu de Noiva",
+      "Rua dos Expedicionários (centro histórico)",
+      "Pedra do Cruzeiro"
+    ],
+    "quando_visitar": "O período seco entre abril e setembro é ideal para trilhas e banhos de cachoeira.",
+    "dicas": "Leve calçados apropriados para trilhas, use roupas confortáveis e respeite as áreas de preservação ambiental.",
+    "coordenadas": { "lat": -21.7209, "lng": -44.6031 },
+    "guia_basico": [
+      "Visite as cachoeiras logo cedo para aproveitar melhor o dia.",
+      "Não esqueça a câmera para registrar as paisagens únicas.",
+      "Experimente a culinária local em restaurantes no centro da cidade.",
+      "Respeite as regras de conservação nos parques naturais.",
+      "Considere contratar guias locais para trilhas mais longas."
+    ]
+  },
+  {
+    "id": "grupo4",
+    "nome": "Caldas",
+    "imagem": "imgdestaques/caldas.jpg",
+    "descricao": [
+      "Caldas é uma charmosa cidade mineira conhecida pelas suas águas termais e cachoeiras na região.",
+      "Além do turismo de saúde, a cidade oferece diversas opções de lazer em meio à natureza.",
+      "Um destino ideal para quem quer relaxar e curtir piscinas naturais e trilhas."
+    ],
+    "atracoes": [
+      "Parque das Águas",
+      "Cachoeira do Ipiranga",
+      "Trilhas no Parque Municipal",
+      "Praça Padre Victor",
+      "Igreja Matriz de São Sebastião",
+      "Balneário Termal"
+    ],
+    "quando_visitar": "Pode ser visitada o ano todo, mas o verão é ideal para aproveitar as cachoeiras e piscinas naturais.",
+    "dicas": "Leve roupas de banho para aproveitar as piscinas termais, use protetor solar e aproveite a gastronomia local.",
+    "coordenadas": { "lat": -21.9244, "lng": -46.2586 },
+    "guia_basico": [
+      "Visite o Parque das Águas para banhos relaxantes nas piscinas termais.",
+      "Faça trilhas leves para conhecer cachoeiras próximas.",
+      "Explore o centro histórico com calma e aprecie a arquitetura local.",
+      "Experimente a comida mineira nos restaurantes da cidade.",
+      "Respeite os horários de visitação dos parques e áreas naturais."
+    ]
+  }
+]
+
+
+}
